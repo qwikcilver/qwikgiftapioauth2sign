@@ -46,7 +46,7 @@ let sortObject = (object) => {
 
     for (var index in keys) {
         var key = keys[index];
-        if (typeof object[key] == 'object') {
+        if (typeof object[key] == 'object' && !!object[key]) {
             if ((object[key] instanceof Array)) {
                 sortedObj[key] = sortObject(object[key]);
             }
